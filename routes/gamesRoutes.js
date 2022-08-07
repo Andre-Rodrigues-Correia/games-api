@@ -3,7 +3,7 @@ const Game = require('../models/Games')
 
 router.post('/insert', async (req, res) => {
 
-    const {name, description, genre, produce, releaseYear, value} = req.body
+    const {name, description, genre, producer, releaseYear, sales, value} = req.body
 
     if(!name){
         res.status(422).json({message: 'Por favor preencha o nome do jogo'});
@@ -18,8 +18,9 @@ router.post('/insert', async (req, res) => {
         name,
         description,
         genre,
-        produce,
+        producer,
         releaseYear,
+        sales,
         value
     }
 
@@ -74,14 +75,15 @@ router.get('/find-id-game/:id', async (req, res) => {
 router.put('/update/:id', async (req, res) => {
 
     const idGame = req.params.id;
-    const {name, description, genre, produce, releaseYear, value} = req.body
+    const {name, description, genre, producer, releaseYear, sales ,value} = req.body
 
     const game = {
         name,
         description,
         genre,
-        produce,
+        producer,
         releaseYear,
+        sales,
         value
     }
    

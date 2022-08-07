@@ -6,6 +6,7 @@ const Games = mongoose.model('Games', {
     genre: String,
     producer: String,
     releaseYear: String,
+    sales: Number,
     value: Number,
 });
 
