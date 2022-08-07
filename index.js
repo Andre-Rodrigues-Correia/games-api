@@ -6,6 +6,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 
 const PORT = process.env.PORT || 9090;
+
 //dados database
 const DB_USER = 'database-api-games';
 const DB_PASS =  encodeURIComponent('SYdQKUkmDZ0NnfAD')
