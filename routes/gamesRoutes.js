@@ -71,7 +71,7 @@ router.get('/find-id-game/:id', async (req, res) => {
 
 })
 
-router.patch('/update/:id', async (req, res) => {
+router.put('/update/:id', async (req, res) => {
 
     const idGame = req.params.id;
     const {name, description, genre, produce, releaseYear, value} = req.body
